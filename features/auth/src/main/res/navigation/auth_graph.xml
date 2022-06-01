@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_graph"
+    app:startDestination="@id/fragment_auth_phone">
+
+    <fragment
+        android:id="@+id/fragment_auth_phone"
+        android:name="com.example.auth.presentation.phone.AuthPhoneFragment"
+        tools:layout="@layout/fragment_auth_phone"
+        android:label="Auth Fragment">
+        <action
+            android:id="@+id/action_fragment_auth_phone_to_fragment_auth_role"
+            app:destination="@id/fragment_auth_role" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_auth_role"
+        android:name="com.example.auth.presentation.role.AuthRoleFragment"
+        tools:layout="@layout/fragment_auth_role"/>
+
+</navigation>

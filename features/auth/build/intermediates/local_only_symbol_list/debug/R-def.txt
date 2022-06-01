@@ -1,0 +1,12 @@
+R_DEF: Internal format may change without notice
+local
+id action_fragment_auth_phone_to_fragment_auth_role
+id auth_graph
+id container
+id fragment_auth_phone
+id fragment_auth_role
+layout activity_auth
+layout fragment_auth_phone
+layout fragment_auth_role
+layout fragment_auth_username
+navigation auth_graph
