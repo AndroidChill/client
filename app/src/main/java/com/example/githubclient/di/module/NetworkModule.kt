@@ -1,6 +1,7 @@
 package com.example.githubclient.di.module
 
 import android.util.Log
+import com.example.auth.network.apiService.AuthService
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
@@ -45,6 +46,11 @@ class NetworkModule {
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
     }
+
+    @Provides
+    @Singleton
+    fun provideAuthService(retrofit: Retrofit) : AuthService =
+        retrofit.create(AuthService::class.java)
 
     @Provides
     @Singleton
